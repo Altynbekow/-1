@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button type="submit" id="submit">button</button>
+    <button class="hide-button" onclick="hideButton()">Скрыть кнопку</button>
+</head>
+<body>
+<script>
+    document.querySelector('#submit').onclick = function() {
+        alert('вы нажали на кнопку');
+    }
+</script>
+
+    
+
+    <script>
+        function hideButton() {
+            var button = document.querySelector('.hide-button');
+            button.style.display = 'none';
+        }
+    </script>
+    <button id="button1">Кнопка 1</button>
+    <button id="button2">Кнопка 2</button>
+    <button id="button3">Кнопка 3</button>
+    <script>
+        var buttons = document.querySelectorAll("button")
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].addEventListener("click", function() {
+            console.log("Кнопка нажата!");
+          });
+        }
+    </script>
+
+</body>
+</html>
